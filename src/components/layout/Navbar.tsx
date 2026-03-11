@@ -30,7 +30,7 @@ export function Navbar() {
         </Link>
 
         {/* Navigation */}
-        <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-earth-600">
+        <nav className="flex flex-wrap items-center gap-4 text-sm font-medium text-earth-600">
           {navLinks.map((link) => {
             const isActive = pathname === link.href || (link.href === "/" && pathname === "/");
 
