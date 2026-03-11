@@ -221,11 +221,10 @@ export default function HomePage() {
                   key={tab.id}
                   type="button"
                   onClick={() => setActiveTab(tab.id)}
-                  className={`rounded-2xl border px-4 py-3 text-left text-sm font-semibold transition ${
-                    isActive
+                  className={`rounded-2xl border px-4 py-3 text-left text-sm font-semibold transition ${isActive
                       ? "border-orange-200 bg-orange-50 text-orange-600 shadow-sm"
                       : "border-transparent text-earth-600 hover:border-orange-100 hover:bg-orange-50/60 hover:text-orange-600"
-                  }`}
+                    }`}
                 >
                   {tab.label}
                 </button>
