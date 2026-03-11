@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${merriweather.variable}`}>
-      <body className="min-h-screen bg-[var(--color-bg)] text-[var(--color-foreground)] antialiased">
+      <body className="min-h-screen overflow-x-hidden bg-[var(--color-bg)] text-[var(--color-foreground)] antialiased">
         <div className="flex min-h-screen flex-col">
           <Navbar />
           <main className="flex-1">{children}</main>
