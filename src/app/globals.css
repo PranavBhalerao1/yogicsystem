@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: #f8f6f2;
+  --color-foreground: #1a1a1a;
+  --color-muted: #4c4c4c;
+  --color-card: #ffffff;
+  --color-border: rgba(15, 23, 42, 0.1);
+  --color-accent: #f76220;
+  color-scheme: light;
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+body {
+  font-family: var(--font-inter), system-ui, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-foreground);
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+}
+
+.page-section {
+  padding: 4rem 1rem;
+}
+
+.section-panel {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 1.25rem;
+  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.08);
+}
+
+::selection {
+  background: #f97316; /* orange */
+  color: white;
+}
+
+::-moz-selection {
+  background: #f97316;
+  color: white;
+}
