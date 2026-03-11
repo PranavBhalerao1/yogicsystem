@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Section } from "@/components/sections/Section";
+import Link from "next/link";
 
 const services = [
   {
@@ -176,7 +177,9 @@ export default function HomePage() {
               Personalized Yoga Therapy for Modern Medical Conditions
             </p>
           </div>
-          <Button className="px-8 py-6 text-base">Learn More</Button>
+          <Link href="/services">
+            <Button className="px-8 py-6 text-base">Learn More</Button>
+          </Link>
         </div>
       </section>
 
