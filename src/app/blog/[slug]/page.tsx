@@ -21,11 +21,11 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
     const post = await getPostBySlug(params.slug);
-    if (!post) return { title: "Post Not Found | Subodh Yoga" };
+    if (!post) return { title: "Post Not Found | Yogic System" };
 
     return {
-        title: `${post.title} | Subodh Yoga`,
-        description: post.summary || "Read this post on Subodh Yoga.",
+        title: `${post.title} | Yogic System`,
+        description: post.summary || "Read this post on Yogic System.",
     };
 }
 
