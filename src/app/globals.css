@@ -47,3 +47,24 @@ a {
   background: #f97316;
   color: white;
 }
+
+/* Notion content styling */
+
+.notion-content .notion {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif;
+}
+
+.notion-content .notion-page {
+  padding: 0;
+  width: 100%;
+}
+
+.notion-content .notion-page-content {
+  max-width: 100%;
+  padding: 0;
+}
+
+.notion-content .notion-title,
+.notion-content .notion-collection-page-properties {
+  display: none !important;
+}

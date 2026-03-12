@@ -1,34 +1,39 @@
+import BlogCard from "@/components/BlogCard";
 import { PageHero } from "@/components/sections/PageHero";
 import { Section } from "@/components/sections/Section";
+import { getPublishedPosts } from "@/lib/notion";
 
 export const metadata = {
-  title: "Blog",
-  description: "Fresh notes, reflections, and guidance from Yogic System."
+    title: "Blog | Subodh Yoga",
+    description: "Read the latest insights on yoga, health, and mindfulness.",
 };
 
-const entries = ["Soft rituals for peak focus", "Seasonal breathwork rounds", "Designing calm workdays"];
+export const revalidate = 60;
 
-export default function BlogPage() {
-  return (
-    <>
-      <PageHero
-        title="From the log"
-        eyebrow="Blog"
-        description="Short, reflective notes on practice, design, and modern living."
-      />
-      <Section title="Recent notes">
-        <div className="space-y-4">
-          {entries.map((entry) => (
-            <div
-              key={entry}
-              className="rounded-[1.25rem] border border-[var(--color-border)] bg-white/80 p-6"
-            >
-              <p className="text-sm font-semibold text-earth-900">{entry}</p>
-              <p className="mt-2 text-sm text-earth-600">Placeholder summary content.</p>
-            </div>
-          ))}
+export default async function Blog() {
+    const posts = await getPublishedPosts();
+
+    return (
+        <div>
+            <PageHero
+                title="Blog"
+                eyebrow="Insights"
+                description="Insights on living a balanced and aware life."
+            />
+
+            <Section className="bg-white">
+                {posts.length === 0 ? (
+                    <p className="text-subodhText opacity-70 text-center">
+                        No published posts yet.
+                    </p>
+                ) : (
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {posts.map((post) => (
+                            <BlogCard key={post.id} post={post} />
+                        ))}
+                    </div>
+                )}
+            </Section>
         </div>
-      </Section>
-    </>
-  );
+    );
 }
