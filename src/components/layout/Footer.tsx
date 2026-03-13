@@ -63,10 +63,16 @@ export function Footer() {
 
             <div className="flex items-start gap-2">
               <MapPin className="mt-[2px] h-4 w-4 text-orange-600" />
-              <p className="text-sm">
+
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=98+James+St+Suite+100+Edison+NJ+08820"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm hover:text-orange-600"
+              >
                 98 James St, Suite #100 <br />
                 Edison, NJ 08820
-              </p>
+              </a>
             </div>
           </div>
         </div>
