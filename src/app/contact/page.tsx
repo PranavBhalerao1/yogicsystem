@@ -114,8 +114,7 @@ export default function ContactPage() {
         <div className="overflow-hidden rounded-2xl border border-earth-200 bg-white shadow-sm">
           <iframe
             title="Yogic System Clinic Location"
-            src="https://www.google.com/maps?q=98+James+St,+Suite+100,+Edison,+NJ+08820&z=15&output=embed"
-            width="100%"
+            src="https://www.google.com/maps?q=Yogic+System+Edison+NJ&output=embed" width="100%"
             height="450"
             style={{ border: 0 }}
             loading="lazy"
