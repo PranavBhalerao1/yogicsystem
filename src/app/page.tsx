@@ -173,7 +173,7 @@ export default function HomePage() {
             <h1 className="text-4xl font-semibold text-earth-900 sm:text-5xl lg:text-6xl">
               Lifestyle Redefined.
             </h1>
-            <p className="mx-auto max-w-2xl text-lg text-earth-600">
+            <p className="mx-auto max-w-2xl text-lg text-earth-800">
               Personalized Yoga Therapy for Modern Medical Conditions
             </p>
           </div>
@@ -184,7 +184,7 @@ export default function HomePage() {
       </section>
 
       <Section title="Why Yoga Therapy?">
-        <div className="mx-auto max-w-3xl text-center text-base leading-relaxed text-earth-600">
+        <div className="mx-auto max-w-3xl text-center text-base leading-relaxed text-earth-800">
           In today's fast-paced, hyperconnected world, modern lifestyles have silently taken a toll on
           our health. Long hours of screen time, sedentary habits, chronic stress, poor dietary choices,
           and emotional burnout have led to a surge in lifestyle-related medical conditions-from back
@@ -222,8 +222,8 @@ export default function HomePage() {
                   type="button"
                   onClick={() => setActiveTab(tab.id)}
                   className={`rounded-2xl border px-4 py-3 text-left text-sm font-semibold transition ${isActive
-                      ? "border-orange-200 bg-orange-50 text-orange-600 shadow-sm"
-                      : "border-transparent text-earth-600 hover:border-orange-100 hover:bg-orange-50/60 hover:text-orange-600"
+                    ? "border-orange-200 bg-orange-50 text-orange-600 shadow-sm"
+                    : "border-transparent text-earth-800 hover:border-orange-100 hover:bg-orange-50/60 hover:text-orange-600"
                     }`}
                 >
                   {tab.label}
@@ -237,9 +237,9 @@ export default function HomePage() {
                 {currentTab.label}
               </p>
               <h3 className="mt-3 text-2xl font-semibold text-earth-900">{currentTab.heading}</h3>
-              <p className="mt-3 text-base text-earth-600">{currentTab.description}</p>
+              <p className="mt-3 text-base text-earth-800">{currentTab.description}</p>
             </div>
-            <ul className="grid gap-2 text-sm text-earth-600">
+            <ul className="grid gap-2 text-sm text-earth-800">
               {currentTab.bullets.map((bullet) => (
                 <li key={bullet} className="flex items-start gap-2">
                   <span className="mt-1 h-1.5 w-1.5 rounded-full bg-orange-400" />
@@ -256,7 +256,7 @@ export default function HomePage() {
 
       <Section title="One-On-One Therapy" description="What's included in your weekly sessions">
         <div className="section-panel rounded-[2rem] px-8 py-8">
-          <ul className="grid gap-3 text-sm text-earth-600 md:grid-cols-2">
+          <ul className="grid gap-3 text-sm text-earth-800 md:grid-cols-2">
             {weeklySessionBullets.map((bullet) => (
               <li key={bullet} className="flex items-start gap-2">
                 <span className="mt-1 h-1.5 w-1.5 rounded-full bg-orange-400" />
@@ -280,7 +280,7 @@ export default function HomePage() {
               description={service.description}
               className="flex h-full flex-col gap-4 rounded-[1.75rem] shadow-card-soft"
             >
-              <ul className="grid gap-2 text-sm text-earth-600">
+              <ul className="grid gap-2 text-sm text-earth-800">
                 {service.bullets.map((bullet) => (
                   <li key={bullet} className="flex items-start gap-2">
                     <span className="mt-1 h-1.5 w-1.5 rounded-full bg-orange-400" />
