@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 
 const footerLinks = [
   { name: "About", href: "/about" },
@@ -46,16 +46,28 @@ export function Footer() {
           </div>
         </div>
         <div className="space-y-2 text-earth-600">
-          <p className="text-xs uppercase tracking-widest text-earth-900 font-semibold">CONTACT</p>
+          <div className="space-y-3 text-earth-600">
+            <p className="text-xs uppercase tracking-widest text-earth-900 font-semibold">
+              CONTACT
+            </p>
 
-          <div className="flex items-censter gap-2">
-            <Mail className="h-4 w-4 text-orange-600" />
-            <a
-              href="mailto:therapy@yogicsystem.com"
-              className="text-sm font-semibold hover:text-orange-600"
-            >
-              therapy@yogicsystem.com
-            </a>
+            <div className="flex items-center gap-2">
+              <Mail className="h-4 w-4 text-orange-600" />
+              <a
+                href="mailto:therapy@yogicsystem.com"
+                className="text-sm font-semibold hover:text-orange-600"
+              >
+                therapy@yogicsystem.com
+              </a>
+            </div>
+
+            <div className="flex items-start gap-2">
+              <MapPin className="mt-[2px] h-4 w-4 text-orange-600" />
+              <p className="text-sm">
+                98 James St, Suite #100 <br />
+                Edison, NJ 08820
+              </p>
+            </div>
           </div>
         </div>
       </div>
