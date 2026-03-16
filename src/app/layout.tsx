@@ -13,17 +13,28 @@ const merriweather = Merriweather({
 
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.yogicsystem.example"),
+  metadataBase: new URL("https://yogicsystem.com"),
   title: {
     default: "Yogic System",
     template: "%s | Yogic System"
   },
-  description: "Calm, professional yoga and wellness experiences with Yogic System.",
+  description: "Lifestyle Redefined.",
+
   openGraph: {
     title: "Yogic System",
-    description: "Calm, professional yoga and wellness experiences.",
-    url: "https://www.yogicsystem.example",
-    siteName: "Yogic System"
+    description: "Lifestyle Redefined.",
+    url: "https://yogicsystem.com",
+    siteName: "Yogic System",
+    type: "website",
+
+    images: [
+      {
+        url: "/og-image.png", // preview image
+        width: 1200,
+        height: 630,
+        alt: "Yogic System"
+      }
+    ]
   }
 };
 
