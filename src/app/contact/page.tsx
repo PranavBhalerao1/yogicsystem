@@ -1,4 +1,5 @@
 import Script from "next/script";
+import RecaptchaWidget from "@/components/RecaptchaWidget";
 
 export const metadata = {
   title: "Contact",
@@ -8,9 +9,8 @@ export const metadata = {
 export default function ContactPage() {
   return (
     <>
-      {/* reCAPTCHA script */}
       <Script
-        src="https://www.google.com/recaptcha/api.js"
+        src="https://www.google.com/recaptcha/api.js?render=explicit"
         strategy="afterInteractive"
       />
 
@@ -41,8 +41,10 @@ export default function ContactPage() {
               <input type="hidden" name="_subject" value="New Contact Message" />
               <input type="hidden" name="_gotcha" />
 
-              {/* Honeypot */}
-              <div className="absolute left-[-9999px] top-auto h-px w-px overflow-hidden" aria-hidden="true">
+              <div
+                className="absolute left-[-9999px] top-auto h-px w-px overflow-hidden"
+                aria-hidden="true"
+              >
                 <input
                   name="company"
                   type="text"
@@ -104,10 +106,9 @@ export default function ContactPage() {
                   />
                 </div>
 
-                {/* ✅ Message field (important for spam reduction) */}
                 <div className="md:col-span-2">
                   <label className="mb-2 block text-sm font-medium text-earth-700">
-                    Message
+                    Message (optional)
                   </label>
                   <textarea
                     name="message"
@@ -117,12 +118,8 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* ✅ reCAPTCHA */}
               <div className="mt-8 flex justify-center">
-                <div
-                  className="g-recaptcha"
-                  data-sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-                />
+                <RecaptchaWidget />
               </div>
 
               <div className="mt-8 flex justify-center">
