@@ -17,7 +17,7 @@ export function Footer() {
       <div className="mx-auto max-w-6xl space-y-6 px-4 py-12 text-sm text-earth-600 md:flex md:items-start md:justify-between md:gap-8">
         <div className="max-w-xs space-y-2">
           <p className="text-lg font-semibold text-earth-900">Yogic System</p>
-          <p className="text-sm">Calm, intentional, modern wellness & therapy.</p>
+          <p className="text-sm">Lifestyle Redefined.</p>
         </div>
         <div className="grid flex-1 grid-cols-2 gap-4 md:grid-cols-4">
           <div className="space-y-2">
