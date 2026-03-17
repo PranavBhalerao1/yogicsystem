@@ -146,14 +146,30 @@ export default function RegistrationPage() {
           </section>
 
           <section>
-            <div className="flex flex-col gap-6 md:flex-row md:justify-center">
-              <a href={IN_PERSON_BOOKING_URL} target="_blank" rel="noopener noreferrer">
-                <Calendar /> In-Person
+            <div className="flex flex-col gap-4 md:flex-row md:justify-center">
+
+              {/* In-Person (default filled → hover outline) */}
+              <a
+                href={IN_PERSON_BOOKING_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-orange-500 px-6 py-3 text-sm font-medium text-white shadow-sm transition-all duration-200 hover:bg-white hover:text-orange-600 hover:border hover:border-orange-500"
+              >
+                <Calendar className="h-4 w-4" />
+                In-Person Consultation
               </a>
 
-              <a href={ONLINE_BOOKING_URL} target="_blank" rel="noopener noreferrer">
-                <Calendar /> Online
+              {/* Online (default outline → hover filled) */}
+              <a
+                href={ONLINE_BOOKING_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-orange-500 px-6 py-3 text-sm font-medium text-orange-600 transition-all duration-200 hover:bg-orange-500 hover:text-white"
+              >
+                <Calendar className="h-4 w-4" />
+                Online Consultation
               </a>
+
             </div>
           </section>
         </div>
